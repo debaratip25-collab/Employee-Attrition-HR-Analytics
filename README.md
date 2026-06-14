@@ -44,74 +44,35 @@ This portfolio project demonstrates **full-stack business analytics capability**
 ```
 Employee-Attrition-HR-Analytics/
 ├── README.md                                    # This file
-├── requirements.txt                             # Python dependencies
 │
-├── 📊 DATA & ANALYSIS
-│   ├── python/
+├── python/
 │   │   ├── hr_analytics_data.py                # Dataset generation & KPI calculation
 │   │   ├── hr_dashboard.py                     # Dashboard visualization (3 pages)
-│   │   └── hr_excel.py                         # Excel workbook generation
 │   │
-│   └── outputs/
-│       ├── hr_attrition_dataset.csv            # 120 employee records (raw data)
-│       ├── department_analysis.csv             # Department-wise metrics
-│       ├── attrition_reasons.csv               # Attrition breakdown
-│       ├── high_risk_employees.csv             # Top 50 at-risk profiles
-│       └── kpis.json                           # All 10 KPIs in JSON format
+├── data/
+│       ├── dataset.xlsx                        # Raw data
 │
-├── 📈 DASHBOARDS & VISUALIZATIONS
+├── dashboard
 │   ├── Page1_KPI_Attrition_Overview.png        # KPIs + attrition analysis (6 charts)
 │   ├── Page2_Demographics_Department.png       # Workforce profiling + dept analysis (8 charts)
 │   └── Page3_Engagement_Retention.png          # Engagement deep dive + opportunities (7 charts)
 │
-├── 📄 PROFESSIONAL REPORTS
-│   ├── Employee_Attrition_HR_Analytics_Dashboard.docx  # 12-section Word document
+├── reports
 │   ├── HR_Attrition_Recommendations_Report.pdf         # 6-page recommendations report
-│   └── Employee_Attrition_HR_Analytics_Excel.xlsx      # 5-sheet Excel workbook
-│
-└── 🔧 SUPPORTING FILES
-    └── (dashboard/): Raw PNG exports
+|
+├── excel
+│   └── Employee_Attrition_HR_Analytics_Excel Analysis.xlsx      # 5-sheet Excel workbook
+
 ```
 
 ---
 
-## 🚀 Quick Start
-
-### Prerequisites
-```bash
-pip install pandas numpy matplotlib seaborn openpyxl reportlab
-```
-
-### Running the Project
-
-**Step 1: Generate Data & Calculate KPIs**
-```bash
-cd python/
-python hr_analytics_data.py
-```
-Output: CSV files + KPI metrics
-
-**Step 2: Create Dashboards**
-```bash
-python hr_dashboard.py
-```
-Output: 3 publication-ready PNG dashboard pages
-
-**Step 3: Generate Excel Workbook**
-```bash
-python hr_excel.py
-```
-Output: Professional 5-sheet Excel file with charts
-
-**Step 4: Generate PDF Report**
-```bash
-python hr_pdf.py
-```
-Output: 6-page recommendations report
-
----
 
 ## 📊 Dashboard Overview
+
+<img width="3075" height="1941" alt="Page1_KPI_Attrition_Overview" src="https://github.com/user-attachments/assets/4f314a09-41da-438d-ac30-bc3d596be85e" />
+<img width="3143" height="1941" alt="Page2_Demographics_Department" src="https://github.com/user-attachments/assets/ac1716c6-ab9c-4b1f-b35c-d28be7d983d0" />
+<img width="3032" height="1882" alt="Page3_Engagement_Retention" src="https://github.com/user-attachments/assets/0d5c7327-4d0d-4611-9f8d-5f97b8512b27" />
 
 ### **Page 1: KPI Overview & Attrition Summary**
 - 10 KPI cards (colour-coded metrics)
@@ -154,20 +115,6 @@ Output: 6-page recommendations report
 ---
 
 ## 📄 Reports
-
-### **Word Document (12 Sections)**
-1. Cover page with branding
-2. Executive summary
-3. Key findings (5 critical insights)
-4. Department performance summary
-5. Business analysis activities
-6. HR metrics & KPI framework
-7. 8-point improvement recommendations
-8. 4-phase implementation roadmap
-9. Dashboard design guide
-10. Business insights Q&A
-11. GitHub & LinkedIn showcase guide
-12. Interview preparation (Q&A)
 
 ### **PDF Report (6 Pages)**
 1. Cover page with KPI strip
@@ -314,9 +261,6 @@ Columns: 20 attributes
 | **Pandas** | Data manipulation & aggregation |
 | **NumPy** | Numerical computing |
 | **Matplotlib & Seaborn** | Professional visualizations & dashboards |
-| **OpenPyXL** | Excel workbook generation with formatting |
-| **ReportLab** | PDF report generation |
-| **Node.js + docx** | Word document generation |
 
 ---
 
@@ -340,74 +284,6 @@ Columns: 20 attributes
 
 ---
 
-## 💼 Career Applications
-
-This project demonstrates:
-
-✅ **Data Analysis** — Dataset creation, cleaning, KPI calculation, trend analysis  
-✅ **Data Visualization** — Multi-page dashboards, chart selection, professional styling  
-✅ **Business Intelligence** — Insight extraction, risk identification, actionable recommendations  
-✅ **Automation** — Python scripting to generate 120+ outputs in seconds  
-✅ **Reporting** — Professional documents (PDF, Excel, Word) with branded formatting  
-✅ **Problem-Solving** — Root cause analysis, cost quantification, solution roadmap  
-✅ **Communication** — Clear findings, visual storytelling, executive-ready output  
-
-**Relevant Job Roles:**
-- Business Analyst
-- Data Analyst
-- HR Analytics / People Operations Analyst
-- BI Analyst / Dashboard Developer
-- Operations Analyst
-
----
-
-## 🎓 Interview Questions & Answers
-
-### **Q1: Explain your project.**
-A: I built an end-to-end HR Analytics Dashboard that analyses 120 employee records across 7 departments to identify attrition patterns and retention risks. The project includes Python-driven data analysis, three professional dashboard pages with 20+ charts, and strategic recommendations. I discovered that 36.7% attrition — driven primarily by work-life balance issues (59.1%) and lack of career growth (25%) — presents a 20–30% reduction opportunity worth $660K–$1.3M annually.
-
-### **Q2: What is employee attrition?**
-A: Attrition is the gradual reduction of workforce headcount through voluntary resignations or non-replacement of departing employees. It differs from layoffs in that it's employee-driven. High attrition increases recruitment costs, disrupts team continuity, and signals organizational health issues. Industry benchmarks are 15–20% annually; our analysis found 36.7%.
-
-### **Q3: Why does attrition matter to businesses?**
-A: High attrition is extremely costly — estimated at 1.5–2× annual salary per departing employee for recruitment, onboarding, training, and lost productivity. In this case, 44 departures cost ~$3.3M–$4.4M annually. More critically, losing experienced employees disrupts operations, damages team morale, and reduces organizational knowledge.
-
-### **Q4: What tools did you use?**
-A: Python (pandas, numpy, matplotlib, seaborn) for data analysis and dashboard generation; openpyxl for Excel automation; reportlab for PDF generation; and docx library for Word documents. I chose Python for its power to automate all 120 outputs in seconds — recreating these manually would take weeks.
-
-### **Q5: How did you identify high-risk employees?**
-A: I built a composite Risk Score (0–10) based on 6 weighted factors: satisfaction, engagement, overtime status, promotion history, manager rating, and work-life balance. Employees scoring 6+ were flagged as High Risk. This identified 50 employees requiring immediate retention intervention.
-
-### **Q6: What's your biggest insight from this analysis?**
-A: Work-life balance is the dominant attrition driver at 59.1%. With 47.5% of the workforce on overtime, this is a systemic workload issue rather than individual cases. A targeted flexible work policy, overtime reduction programme, and role right-sizing could realistically reduce attrition by 20–25% within one year — saving over $660K annually.
-
----
-
-## 📚 How to Use This Repository
-
-### **For Portfolio/Interview Showcase:**
-1. Clone the repo
-2. Review README.md (you're reading it!)
-3. Check the three dashboard PNG images
-4. Open the Excel workbook to explore interactive data
-5. Read the PDF report for findings & recommendations
-6. Open the Word document for full project scope
-
-### **To Recreate the Analysis:**
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run `python/hr_analytics_data.py` → generates CSV datasets
-3. Run `python/hr_dashboard.py` → creates 3 dashboard PNGs
-4. Run `python/hr_excel.py` → creates Excel workbook
-5. Run `python/hr_pdf.py` → generates PDF report
-
-### **To Modify the Project:**
-- Change dataset size in `hr_analytics_data.py` (line: `for i in range(1, 121)`)
-- Modify colour palette in `hr_dashboard.py` (PRIMARY, SECONDARY, etc.)
-- Edit recommendations in `hr_pdf.py` or `hr_word.js`
-- Update date from June 2026 to current date
-
----
-
 ## 📊 Visual Sneak Peek
 
 **Page 1: KPI Overview**
@@ -428,44 +304,6 @@ A: Work-life balance is the dominant attrition driver at 59.1%. With 47.5% of th
 - Manager rating impact
 - Work-life balance vs attrition
 - 5 retention opportunity cards with specific actions
-
----
-
-## 🤝 Contributing
-
-This is a portfolio project. If you'd like to extend it:
-- Add machine learning predictions (attrition probability model)
-- Integrate live HR data sources (Workday, SAP SuccessFactors)
-- Create interactive Power BI / Tableau dashboard
-- Add sentiment analysis on exit interview feedback
-- Implement predictive retention scoring
-
----
-
-## 📞 Contact & Social
-
-**LinkedIn:** [Your LinkedIn URL]  
-**Email:** [Your Email]  
-**Portfolio:** [Your Portfolio Site]
-
----
-
-## 📄 License
-
-This project is shared as a portfolio demonstration. Feel free to fork, modify, and use for learning purposes.
-
----
-
-## 🙏 Acknowledgments
-
-Inspired by BPO (Business Process Optimization) analysis frameworks and real-world HR analytics challenges. Built as a complete end-to-end business analytics demonstration.
-
----
-
-**Last Updated:** June 2026  
-**Project Type:** Portfolio / Educational  
-**Difficulty Level:** Intermediate–Advanced  
-**Time to Complete:** 2–3 hours (running all scripts + reviewing outputs)
 
 ---
 
